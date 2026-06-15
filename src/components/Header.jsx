@@ -2,7 +2,6 @@ import { ASSETS, CONTACT_LINKS } from "../constants.js";
 
 const navItems = [
   { href: "#fundacion", label: "Fundación" },
-  { href: "#historia", label: "Nuestra historia" },
   { href: "#plataforma", label: "Plataforma" },
   { href: "#contacto", label: "Contacto" },
 ];

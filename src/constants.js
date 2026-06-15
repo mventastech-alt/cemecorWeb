@@ -1,5 +1,5 @@
 export const ASSETS = {
-  logo: "/assets/logo-cemecor.jpg",
+  logo: "/assets/logo-cemecor.png",
   hero: "/assets/hero-cemecor.jpg",
   encuentro: "/assets/encuentro-1.jpg",
   capacitacion: "/assets/capacitacion-1.jpg",
@@ -9,11 +9,11 @@ export const ASSETS = {
 
 export const CONTACT_LINKS = {
   whatsappLabel: "WhatsApp",
-  whatsappUrl: "https://wa.me/549XXXXXXXXXX",
+  whatsappUrl: "https://wa.me/5493516097819",
   instagramLabel: "Instagram",
   instagramUrl: "https://instagram.com/cemecor.ok",
-  email: "info@cemercorcba.com.ar",
-  emailUrl: "mailto:info@cemercorcba.com.ar",
+  email: "info@fundacioncemecor.com.ar",
+  emailUrl: "mailto:info@fundacioncemecor.com.ar",
   platformUrl: "https://cemecorcba.web.app/",
 };
 

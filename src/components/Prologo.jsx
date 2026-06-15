@@ -8,29 +8,11 @@ export default function Prologo() {
           <p>
             CEMECOR nace con una convicción profunda: cuando una mujer Emprendedora o Empresaria
             encuentra acompañamiento, formación y una red que la impulsa, su proyecto, su empresa y
-            su liderazgo crecen con más fuerza, ampliando su impacto en la economía y en la
-            sociedad.
+            su liderazgo crecen con más fuerza.
           </p>
           <p>
-            Desde la ciudad de Córdoba, la Fundación reúne a mujeres con historias, talentos y
-            trayectorias diversas, unidas por un mismo propósito: construir una comunidad donde cada
-            Emprendedora y Empresaria pueda sentirse parte, compartir experiencias, potenciar sus
-            capacidades, generar oportunidades y avanzar acompañada.
-          </p>
-          <p>
-            CEMECOR es mucho más que un espacio de encuentro. Es una red dinámica de mujeres que
-            creen en el valor de la colaboración, la capacitación continua, la comunicación
-            estratégica y la participación activa en la vida económica y social.
-          </p>
-          <p>
-            La Fundación promueve el desarrollo de los distintos perfiles empresariales y
-            emprendedores, brindando espacios de networking, rondas de vinculación, encuentros de
-            análisis económico, formación en liderazgo y oportunidades de crecimiento profesional.
-          </p>
-          <p>
-            En CEMECOR, cada mujer encuentra un lugar para crecer, conectar, aprender y fortalecer
-            su liderazgo, contribuyendo al desarrollo de una comunidad más sólida, innovadora y
-            comprometida con el progreso.
+            Desde Córdoba, la Fundación reúne trayectorias diversas para crear comunidad, compartir
+            experiencias, potenciar capacidades y generar nuevas oportunidades.
           </p>
         </div>
         <aside className="statement-card">
@@ -51,8 +33,7 @@ export default function Prologo() {
           </p>
           <ul>
             <li>Creación desde cero y desarrollo de nuevas iniciativas.</li>
-            <li>Innovación, resolución de problemas y contacto directo con su proyecto.</li>
-            <li>Validación de ideas, retos personales y compromiso con su comunidad.</li>
+            <li>Innovación, aprendizaje y compromiso con su comunidad.</li>
           </ul>
         </article>
         <article className="profile-card featured">
@@ -64,8 +45,7 @@ export default function Prologo() {
           </p>
           <ul>
             <li>Gestión, planificación y construcción de sistemas de trabajo.</li>
-            <li>Delegación, liderazgo de equipos y dirección estratégica.</li>
-            <li>Crecimiento sostenido, expansión y presencia en el sector productivo.</li>
+            <li>Liderazgo, dirección estratégica y crecimiento sostenido.</li>
           </ul>
         </article>
       </div>

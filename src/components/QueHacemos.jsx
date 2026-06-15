@@ -5,11 +5,6 @@ const values = [
     text: "Trabajamos juntas, compartiendo experiencias, aprendizajes y desafíos.",
   },
   {
-    icon: "✦",
-    title: "Innovación",
-    text: "Incorporamos herramientas digitales para mantener conectada a la comunidad.",
-  },
-  {
     icon: "✓",
     title: "Integridad",
     text: "Promovemos vínculos basados en el respeto, la transparencia y el compromiso.",
@@ -23,11 +18,6 @@ const values = [
     icon: "◈",
     title: "Participación",
     text: "Impulsamos una comunidad activa, donde cada voz tiene un lugar.",
-  },
-  {
-    icon: "✎",
-    title: "Formación",
-    text: "Creemos en el aprendizaje como camino para abrir nuevas posibilidades.",
   },
 ];
 
@@ -77,15 +67,14 @@ function Card({ icon, title, text }) {
 export default function QueHacemos() {
   return (
     <>
-      <section className="soft foundation-continuation">
+      <section id="hacemos" className="soft foundation-continuation">
         <div className="container">
           <div className="section-head">
             <span className="eyebrow">Qué es CEMECOR</span>
             <h2>Más que una Fundación: una comunidad que acompaña</h2>
             <p className="section-lead">
-              CEMECOR agrupa, representa y potencia a mujeres Emprendedoras, Empresarias,
-              profesionales y creadoras de proyectos. Su misión es generar espacios de formación,
-              participación, comunicación y acompañamiento.
+              CEMECOR representa y potencia a mujeres Emprendedoras, Empresarias, profesionales y
+              creadoras de proyectos desde la formación, la participación y la comunidad.
             </p>
           </div>
           <div className="cards-grid">
@@ -96,14 +85,13 @@ export default function QueHacemos() {
         </div>
       </section>
 
-      <section className="foundation-do">
+      <section className="foundation-do compact-do">
         <div className="container">
           <div className="section-head">
             <span className="eyebrow">Qué hacemos</span>
             <h2>Acompañamos proyectos, historias y caminos</h2>
             <p className="section-lead">
-              CEMECOR está pensado para mujeres Emprendedoras y Empresarias que desean
-              desarrollarse, aprender, compartir y formar parte de una red que acompaña.
+              Propuestas simples y concretas para crecer acompañadas.
             </p>
           </div>
           <div className="cards-grid">

@@ -1,4 +1,4 @@
-import { ASSETS, CONTACT_LINKS } from "../constants.js";
+import { CONTACT_LINKS } from "../constants.js";
 
 function FinalCallToAction() {
   return (
@@ -28,7 +28,6 @@ export default function Footer() {
       <footer className="footer">
         <div className="container footer-grid">
           <div>
-            <img className="footer-logo" src={ASSETS.logo} alt="Logo CEMECOR" />
             <h3 className="footer-title">CEMECOR</h3>
             <p>Fundación de mujeres Emprendedoras y Empresarias · Córdoba, Argentina</p>
             <p className="footer-copy">Enseñar, crecer y comunicar.</p>
@@ -37,7 +36,7 @@ export default function Footer() {
             <h4>Secciones</h4>
             <div className="footer-links">
               <a href="#fundacion">Fundación</a>
-              <a href="#historia">Nuestra historia</a>
+              <a href="#plataforma">Plataforma</a>
             </div>
           </div>
           <div>
@@ -45,7 +44,7 @@ export default function Footer() {
             <div className="footer-links">
               <a href="#plataforma">Plataforma</a>
               <a href="#contacto">Sumarme</a>
-              <a href="#faq">Preguntas frecuentes</a>
+              <a href="#contacto">Contacto</a>
             </div>
           </div>
           <div>

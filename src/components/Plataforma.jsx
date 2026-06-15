@@ -45,7 +45,7 @@ export default function Plataforma() {
             <a className="btn primary" href="#contacto">
               Solicitar acceso
             </a>
-            <a className="btn outline" href="#faq">
+            <a className="btn outline" href="#contacto">
               Conocer cómo funciona
             </a>
           </div>
