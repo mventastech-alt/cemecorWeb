@@ -1,4 +1,4 @@
-import { ASSETS } from "../constants.js";
+import { ASSETS, CONTACT_LINKS } from "../constants.js";
 
 const alliances = [
   {
@@ -69,7 +69,18 @@ function AlianzasInstitucionales() {
 export default function Contacto() {
   const handleSubmit = (event) => {
     event.preventDefault();
-    window.alert("Formulario visual listo para conectar en Cursor.");
+
+    const formData = new FormData(event.currentTarget);
+    const message = [
+      "Hola CEMECOR, quiero hacer una consulta.",
+      `Nombre: ${formData.get("nombre")}`,
+      `Email: ${formData.get("email")}`,
+      `Teléfono: ${formData.get("telefono") || "No indicado"}`,
+      `Motivo: ${formData.get("motivo")}`,
+      `Mensaje: ${formData.get("mensaje") || "No indicado"}`,
+    ].join("\n");
+
+    window.open(`${CONTACT_LINKS.whatsappUrl}?text=${encodeURIComponent(message)}`, "_blank");
   };
 
   return (
@@ -97,19 +108,19 @@ export default function Contacto() {
           <form className="form" onSubmit={handleSubmit}>
             <div className="field">
               <label htmlFor="nombre">Nombre</label>
-              <input id="nombre" placeholder="Tu nombre" required />
+              <input id="nombre" name="nombre" placeholder="Tu nombre" required />
             </div>
             <div className="field">
               <label htmlFor="email">Email</label>
-              <input id="email" type="email" placeholder="tu@email.com" required />
+              <input id="email" name="email" type="email" placeholder="tu@email.com" required />
             </div>
             <div className="field">
               <label htmlFor="telefono">Teléfono</label>
-              <input id="telefono" placeholder="Tu teléfono" />
+              <input id="telefono" name="telefono" placeholder="Tu teléfono" />
             </div>
             <div className="field">
               <label htmlFor="motivo">Motivo de consulta</label>
-              <select id="motivo">
+              <select id="motivo" name="motivo">
                 <option>Quiero sumarme</option>
                 <option>Quiero conocer la Fundación</option>
                 <option>Quiero proponer una alianza</option>
@@ -118,7 +129,11 @@ export default function Contacto() {
             </div>
             <div className="field">
               <label htmlFor="mensaje">Mensaje</label>
-              <textarea id="mensaje" placeholder="Contanos brevemente en qué podemos acompañarte" />
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                placeholder="Contanos brevemente en qué podemos acompañarte"
+              />
             </div>
             <button className="btn primary" type="submit">
               Enviar consulta

@@ -4,6 +4,7 @@ const navItems = [
   { href: "#fundacion", label: "Fundación" },
   { href: "#plataforma", label: "Plataforma" },
   { href: "#contacto", label: "Contacto" },
+  { href: CONTACT_LINKS.instagramUrl, label: "Eventos", isExternal: true, isButton: true },
 ];
 
 export default function Header() {
@@ -15,7 +16,13 @@ export default function Header() {
         </a>
         <nav className="menu" aria-label="Navegación principal">
           {navItems.map((item) => (
-            <a href={item.href} key={item.href}>
+            <a
+              className={item.isButton ? "menu-event-button" : undefined}
+              href={item.href}
+              key={item.href}
+              rel={item.isExternal ? "noreferrer" : undefined}
+              target={item.isExternal ? "_blank" : undefined}
+            >
               {item.label}
             </a>
           ))}
@@ -32,7 +39,13 @@ export default function Header() {
           <summary>Menú</summary>
           <nav className="mobile-panel" aria-label="Navegación mobile">
             {navItems.map((item) => (
-              <a href={item.href} key={item.href}>
+              <a
+                className={item.isButton ? "menu-event-button" : undefined}
+                href={item.href}
+                key={item.href}
+                rel={item.isExternal ? "noreferrer" : undefined}
+                target={item.isExternal ? "_blank" : undefined}
+              >
                 {item.label}
               </a>
             ))}
