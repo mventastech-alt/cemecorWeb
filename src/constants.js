@@ -1,6 +1,33 @@
 export const ASSETS = {
   logo: "/assets/logo-cemecor.png",
   hero: "/assets/hero-cemecor.jpg",
+  heroSlides: [
+    {
+      src: "/assets/hero-cemecor-encuentro.png",
+      alt: "Mujeres participando de un encuentro institucional CEMECOR",
+      position: "center 52%",
+    },
+    {
+      src: "/assets/hero-cemecor-retrato.png",
+      alt: "Representante de CEMECOR en espacio institucional",
+      position: "center 48%",
+    },
+    {
+      src: "/assets/hero-cemecor-grupo.png",
+      alt: "Grupo de mujeres de la comunidad CEMECOR",
+      position: "center 50%",
+    },
+    {
+      src: "/assets/hero-cemecor-bandera.png",
+      alt: "Grupo CEMECOR con bandera institucional en actividad comunitaria",
+      position: "center 48%",
+    },
+    {
+      src: "/assets/hero-cemecor-institucional.png",
+      alt: "Mujeres de CEMECOR sosteniendo una bandera institucional",
+      position: "center 66%",
+    },
+  ],
   encuentro: "/assets/encuentro-1.jpg",
   capacitacion: "/assets/capacitacion-1.jpg",
   comunidad: "/assets/comunidad-1.jpg",

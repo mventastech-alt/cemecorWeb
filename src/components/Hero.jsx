@@ -34,7 +34,20 @@ export default function Hero() {
           </div>
           <div className="hero-card" aria-label="Imagen de comunidad CEMECOR">
             <div className="hero-image">
-              <img src={ASSETS.hero} alt="Mujeres reunidas en un encuentro institucional" />
+              {ASSETS.heroSlides.map((image, index) => (
+                <div
+                  className="hero-slide"
+                  key={image.src}
+                  style={{
+                    backgroundImage: `url(${image.src})`,
+                    backgroundPosition: image.position,
+                    animationDelay: `${index * 4}s`,
+                    "--slide-position": image.position,
+                  }}
+                >
+                  <img className="hero-slide-photo" src={image.src} alt={image.alt} />
+                </div>
+              ))}
             </div>
             <span className="float-card one">✦ Formación</span>
             <span className="float-card two">♡ Comunidad</span>

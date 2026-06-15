@@ -76,7 +76,7 @@ export default function Impacto() {
   }, []);
 
   return (
-    <section>
+    <section className="impacto">
       <div className="container">
         <div className="section-head">
           <span className="eyebrow">Impacto</span>

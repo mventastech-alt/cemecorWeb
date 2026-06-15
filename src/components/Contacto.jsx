@@ -38,7 +38,7 @@ const contactSteps = [
 
 function AlianzasInstitucionales() {
   return (
-    <section>
+    <section className="alianzas">
       <div className="container two-col">
         <div>
           <span className="eyebrow">Alianzas institucionales</span>
