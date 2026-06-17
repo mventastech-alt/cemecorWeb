@@ -39,27 +39,34 @@ const contactSteps = [
 function AlianzasInstitucionales() {
   return (
     <section className="alianzas">
-      <div className="container two-col">
-        <div>
-          <span className="eyebrow">Alianzas institucionales</span>
-          <h2 className="section-title-offset">Alianzas que fortalecen el propósito</h2>
-          <p className="section-lead section-copy-offset">
-            CEMECOR abre sus puertas a instituciones, organizaciones, profesionales y espacios que
-            compartan el compromiso de acompañar a mujeres Emprendedoras y Empresarias, promoviendo
-            su desarrollo y participación.
-          </p>
-          <div className="media-main media-offset">
-            <img src={ASSETS.actividad} alt="Actividad institucional CEMECOR" />
+      <div className="container">
+        <div className="two-col">
+          <div>
+            <span className="eyebrow">Alianzas institucionales</span>
+            <h2 className="section-title-offset">Alianzas que fortalecen el propósito</h2>
+            <p className="section-lead section-copy-offset">
+              CEMECOR abre sus puertas a instituciones, organizaciones, profesionales y espacios que
+              compartan el compromiso de acompañar a mujeres Emprendedoras y Empresarias, promoviendo
+              su desarrollo y participación.
+            </p>
+          </div>
+          <div className="cards-grid single-column-grid">
+            {alliances.map((item) => (
+              <article className="card" key={item.title}>
+                <div className="card-icon">{item.icon}</div>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
           </div>
         </div>
-        <div className="cards-grid single-column-grid">
-          {alliances.map((item) => (
-            <article className="card" key={item.title}>
-              <div className="card-icon">{item.icon}</div>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </article>
-          ))}
+        <div className="partners-wall-wrap">
+          <img
+            className="partners-wall"
+            src={ASSETS.partnersWall}
+            alt="Empresas e instituciones que acompañan a CEMECOR"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>

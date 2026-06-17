@@ -1,4 +1,15 @@
 import { CONTACT_LINKS } from "../constants.js";
+import { useEffect, useState } from "react";
+
+const legalParagraphs = [
+  "La aplicación CEMECOR y Web fundacioncemecor.com.ar es una plataforma tecnológica desarrollada, administrada y operada por EnjoySTI, en el marco de un convenio de colaboración tecnológica con Fundación CEMECOR.",
+  "EnjoySTI brinda a Fundación CEMECOR servicios tecnológicos, soporte digital y herramientas de gestión sin cargo para la Fundación, atento a su carácter institucional y a que se trata de una organización en etapa inicial.",
+  "El abono que realizan las usuarias dentro de la aplicación corresponde exclusivamente al uso del servicio digital provisto por EnjoySTI, incluyendo el acceso a las funcionalidades, herramientas, beneficios operativos y utilidades disponibles dentro de la plataforma.",
+  "Dicho importe no constituye una donación, cuota social, aporte institucional, contribución solidaria ni ingreso destinado a Fundación CEMECOR. Fundación CEMECOR no percibe, administra ni recibe los importes abonados por el uso de la aplicación.",
+  "El valor actual del servicio digital es de $12.000. Este importe corresponde únicamente al servicio prestado por EnjoySTI y podrá ser actualizado en el futuro, previa comunicación dentro de la plataforma o por los medios habilitados.",
+  "Proveedor del servicio digital: EnjoySTI.",
+  "La contratación, adhesión o pago del servicio digital implica que la usuaria declara haber leído, comprendido y aceptado las presentes condiciones.",
+];
 
 const contactItems = [
   {
@@ -51,7 +62,59 @@ function FinalCallToAction() {
   );
 }
 
+function LegalModal({ isOpen, onClose }) {
+  useEffect(() => {
+    if (!isOpen) {
+      return undefined;
+    }
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        onClose();
+      }
+    };
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen, onClose]);
+
+  if (!isOpen) {
+    return null;
+  }
+
+  return (
+    <div className="legal-modal-backdrop" onClick={onClose} role="presentation">
+      <div
+        className="legal-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="legal-modal-title"
+        onClick={(event) => event.stopPropagation()}
+      >
+        <div className="legal-modal-header">
+          <h2 id="legal-modal-title">Legales y condiciones del servicio digital</h2>
+          <button className="legal-modal-close" type="button" onClick={onClose} aria-label="Cerrar">
+            ×
+          </button>
+        </div>
+        <div className="legal-modal-body">
+          {legalParagraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Footer() {
+  const [isLegalOpen, setIsLegalOpen] = useState(false);
   return (
     <>
       <FinalCallToAction />
@@ -90,10 +153,16 @@ export default function Footer() {
           </div>
         </div>
         <div className="container legal">
-          CEMECOR · Córdoba, Argentina. Todos los derechos reservados. Sitio creado por{" "}
-          <a href="https://enjoysti.com.ar">EnjoySTI</a>.
+          <span>
+            CEMECOR · Córdoba, Argentina. Todos los derechos reservados. Sitio creado por{" "}
+            <a href="https://enjoysti.com.ar">EnjoySTI</a>.
+          </span>
+          <button className="legal-link" type="button" onClick={() => setIsLegalOpen(true)}>
+            Legales y condiciones del servicio
+          </button>
         </div>
       </footer>
+      <LegalModal isOpen={isLegalOpen} onClose={() => setIsLegalOpen(false)} />
     </>
   );
 }

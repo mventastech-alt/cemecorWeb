@@ -32,6 +32,7 @@ export const ASSETS = {
   capacitacion: "/assets/capacitacion-1.jpg",
   comunidad: "/assets/comunidad-1.jpg",
   actividad: "/assets/actividad-1.jpg",
+  partnersWall: "/assets/partners-wall.png",
 };
 
 export const CONTACT_LINKS = {
