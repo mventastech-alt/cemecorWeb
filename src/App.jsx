@@ -3,6 +3,7 @@ import Hero from "./components/Hero.jsx";
 import Prologo from "./components/Prologo.jsx";
 import Plataforma from "./components/Plataforma.jsx";
 import Impacto from "./components/Impacto.jsx";
+import AlianzasEstrategicas from "./components/AlianzasEstrategicas.jsx";
 import Contacto from "./components/Contacto.jsx";
 import Footer from "./components/Footer.jsx";
 import { useEffect } from "react";
@@ -45,6 +46,7 @@ export default function App() {
         <Prologo />
         <Plataforma />
         <Impacto />
+        <AlianzasEstrategicas />
         <Contacto />
       </main>
       <Footer />

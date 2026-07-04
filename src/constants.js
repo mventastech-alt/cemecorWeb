@@ -51,6 +51,29 @@ export const METRICS = [
   { value: "+300", label: "participaciones comunitarias" },
 ];
 
+export const SPONSORS = [
+  { name: "Gobierno de la Provincia de Córdoba", logo: "/assets/partners/gobierno-cordoba.png" },
+  { name: "CPC General Paz", logo: "/assets/partners/cpc-general-paz.png" },
+  { name: "Brennan Mostazas Dijon", logo: "/assets/partners/brennan.png" },
+  { name: "Dibaco Amoblamientos", logo: "/assets/partners/dibaco-amoblamientos.png" },
+  { name: "Giraudo Equipamiento", logo: "/assets/partners/giraudo-equipamiento.png" },
+  { name: "Just Swiss Quality", logo: "/assets/partners/just-swiss-quality.png" },
+  { name: "Tres Reflejos Retratos", logo: "/assets/partners/tres-reflejos-retratos.png" },
+  { name: "Favi González by Bliss", logo: "/assets/partners/favi-gonzalez-by-bliss.png" },
+  { name: "vida cowork.", logo: "/assets/partners/vida-cowork.png" },
+  { name: "Cassaro Matafuegos", logo: "/assets/partners/cassaro-matafuegos.png" },
+  { name: "Tarde de Mujeres", logo: "/assets/partners/tarde-de-mujeres.png" },
+  { name: "XOis Producciones", logo: "/assets/partners/xois-producciones.png" },
+  { name: "EspaTrends Argentina", logo: "/assets/partners/espatrends-argentina.png" },
+  {
+    name: "Viajes TDH Urca",
+    logo: "/assets/partners/viajes-tdh-urca-horizontal.png",
+    wide: true,
+  },
+  { name: "Cassaro Chopp", logo: "/assets/partners/cassaro-chopp.png" },
+  { name: "Fitness Group", logo: "/assets/partners/fitness-group.png" },
+];
+
 export const TESTIMONIALS = [
   {
     quote:
