@@ -17,7 +17,13 @@ export default function AlianzasEstrategicas() {
             <li className="sponsor-item" key={sponsor.name}>
               <div className="sponsor-card">
                 <img
-                  className={`sponsor-logo${sponsor.wide ? " sponsor-logo--wide" : ""}`}
+                  className={[
+                    "sponsor-logo",
+                    sponsor.wide && "sponsor-logo--wide",
+                    sponsor.size === "large" && "sponsor-logo--large",
+                  ]
+                    .filter(Boolean)
+                    .join(" ")}
                   src={sponsor.logo}
                   alt={sponsor.name}
                   loading="lazy"

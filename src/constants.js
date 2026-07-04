@@ -58,8 +58,16 @@ export const SPONSORS = [
   { name: "Dibaco Amoblamientos", logo: "/assets/partners/dibaco-amoblamientos.png" },
   { name: "Giraudo Equipamiento", logo: "/assets/partners/giraudo-equipamiento.png" },
   { name: "Just Swiss Quality", logo: "/assets/partners/just-swiss-quality.png" },
-  { name: "Tres Reflejos Retratos", logo: "/assets/partners/tres-reflejos-retratos.png" },
-  { name: "Favi González by Bliss", logo: "/assets/partners/favi-gonzalez-by-bliss.png" },
+  {
+    name: "Tres Reflejos Retratos",
+    logo: "/assets/partners/tres-reflejos-retratos.png",
+    size: "large",
+  },
+  {
+    name: "Favi González by Bliss",
+    logo: "/assets/partners/favi-gonzalez-by-bliss.png",
+    size: "large",
+  },
   { name: "vida cowork.", logo: "/assets/partners/vida-cowork.png" },
   { name: "Cassaro Matafuegos", logo: "/assets/partners/cassaro-matafuegos.png" },
   { name: "Tarde de Mujeres", logo: "/assets/partners/tarde-de-mujeres.png" },

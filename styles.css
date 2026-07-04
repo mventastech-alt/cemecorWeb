@@ -467,6 +467,14 @@ section{padding:78px 0}
   max-width:180px;
   max-height:56px;
 }
+.sponsor-logo--large{
+  max-width:260px;
+  max-height:120px;
+}
+.sponsor-item:has(.sponsor-logo--large) .sponsor-card{
+  min-height:140px;
+  padding:22px 12px;
+}
 
 .reveal-on-scroll{
   opacity:0;
