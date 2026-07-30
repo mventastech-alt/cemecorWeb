@@ -54,6 +54,7 @@ export const METRICS = [
 export const SPONSORS = [
   { name: "Gobierno de la Provincia de Córdoba", logo: "/assets/partners/gobierno-cordoba.png" },
   { name: "Enjoy STI", logo: "/assets/partners/enjoy-sti.png" },
+  { name: "Impulsa Argentina", logo: "/assets/partners/impulsa-argentina.png", wide: true },
   { name: "Dale! 93.1 FM", logo: "/assets/partners/dale-fm.png" },
   { name: "CPC General Paz", logo: "/assets/partners/cpc-general-paz.png", size: "large" },
   { name: "Brennan", logo: "/assets/partners/brennan.png" },
