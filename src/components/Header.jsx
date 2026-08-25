@@ -49,6 +49,9 @@ export default function Header() {
                 {item.label}
               </a>
             ))}
+            <a className="btn outline" href={CONTACT_LINKS.platformUrl}>
+              Ingresar a la plataforma
+            </a>
             <a className="btn primary" href="#contacto">
               Quiero sumarme
             </a>
