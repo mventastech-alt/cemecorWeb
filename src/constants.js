@@ -27,6 +27,21 @@ export const ASSETS = {
       alt: "Mujeres de CEMECOR sosteniendo una bandera institucional",
       position: "center 66%",
     },
+    {
+      src: "/assets/hero-cemecor-capacitacion-sala.jpg",
+      alt: "Encuentro de formación CEMECOR con audiencia en sala",
+      position: "center 42%",
+    },
+    {
+      src: "/assets/hero-cemecor-conversacion.jpg",
+      alt: "Conversación entre mujeres en un espacio de CEMECOR",
+      position: "center 32%",
+    },
+    {
+      src: "/assets/hero-cemecor-marco-juridico.jpg",
+      alt: "Charla sobre marco jurídico para emprendedoras y empresarias",
+      position: "center 36%",
+    },
   ],
   encuentro: "/assets/encuentro-1.jpg",
   capacitacion: "/assets/capacitacion-1.jpg",

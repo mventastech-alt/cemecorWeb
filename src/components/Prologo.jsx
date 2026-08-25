@@ -49,6 +49,36 @@ export default function Prologo() {
           </ul>
         </article>
       </div>
+      <div className="container">
+        <a
+          className="news-feature"
+          href="https://cdcordoba.gob.ar/reconocimiento-a-mujeres-empresarias-y-emprendedoras-en-cordoba/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Leer la nota: Reconocimiento a mujeres empresarias y emprendedoras en Córdoba"
+        >
+          <img
+            src="/assets/reconocimiento-concejo.png"
+            alt="Reconocimiento a mujeres empresarias y emprendedoras en Córdoba — Concejo Deliberante"
+            width={1200}
+            height={630}
+            loading="lazy"
+            decoding="async"
+          />
+          <span className="news-feature-cue" aria-hidden="true">
+            Ver nota
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4 10h11M11 5l5 5-5 5"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </span>
+        </a>
+      </div>
     </section>
   );
 }

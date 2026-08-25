@@ -11,7 +11,7 @@ import { useEffect } from "react";
 export default function App() {
   useEffect(() => {
     const revealElements = document.querySelectorAll(
-      "main > section, .final-cta, .card, .profile-card, .stat, .statement-card, .phone, .form"
+      "main > section, .final-cta, .card, .profile-card, .stat, .statement-card, .phone, .form, .news-feature"
     );
 
     if (!("IntersectionObserver" in window)) {

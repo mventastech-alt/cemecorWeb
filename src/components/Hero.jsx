@@ -7,6 +7,9 @@ const concepts = [
   { icon: "✦", label: "Comunidad en movimiento" },
 ];
 
+const SLIDE_SECONDS = 4;
+const slideCycleSeconds = ASSETS.heroSlides.length * SLIDE_SECONDS;
+
 export default function Hero() {
   return (
     <section className="hero">
@@ -41,7 +44,8 @@ export default function Hero() {
                   style={{
                     backgroundImage: `url(${image.src})`,
                     backgroundPosition: image.position,
-                    animationDelay: `${index * 4}s`,
+                    animationDuration: `${slideCycleSeconds}s`,
+                    animationDelay: `${index * SLIDE_SECONDS}s`,
                     "--slide-position": image.position,
                   }}
                 >
