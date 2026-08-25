@@ -58,13 +58,18 @@ export default function Prologo() {
           aria-label="Leer la nota: Reconocimiento a mujeres empresarias y emprendedoras en Córdoba"
         >
           <img
-            src="/assets/reconocimiento-concejo.png"
+            src="/assets/reconocimiento-concejo.jpg"
             alt="Reconocimiento a mujeres empresarias y emprendedoras en Córdoba — Concejo Deliberante"
-            width={1200}
-            height={630}
+            width={1600}
+            height={900}
             loading="lazy"
             decoding="async"
           />
+          <div className="news-feature-copy">
+            <span className="news-feature-kicker">Eventos · Noticias</span>
+            <strong>Reconocimiento a mujeres empresarias y emprendedoras en Córdoba</strong>
+            <span className="news-feature-date">24 de agosto de 2026</span>
+          </div>
           <span className="news-feature-cue" aria-hidden="true">
             Ver nota
             <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
