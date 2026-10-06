@@ -52,7 +52,8 @@ export default function Fundadora() {
           <p>
             Su primer gran evento, «Tarde de Mujeres», nació de una necesidad personal: conocer y
             conectar con otras mujeres que estaban empezando a emprender. Forma parte de la comisión
-            directiva de la Cámara de Cerveceros de Córdoba como única mujer del grupo, y sabe por
+            directiva de la Cámara de Cerveceros de Córdoba como una de las pocas mujeres miembras
+            del grupo, y sabe por
             experiencia lo que significa liderar en espacios donde todavía somos pocas.
           </p>
           <p>
