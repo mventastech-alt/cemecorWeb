@@ -8,8 +8,8 @@ export default function BrandLockup({ className = "" }) {
       <span className="brand-text">
         <strong>CEMECOR</strong>
         <small>
-          Fundación de Mujeres Empresarias
-          <br />y Emprendedoras de Córdoba
+          Fundación de Emprendedoras
+          <br />y Mujeres Empresarias de Córdoba
         </small>
       </span>
     </span>
