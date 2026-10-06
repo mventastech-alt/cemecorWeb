@@ -1,6 +1,6 @@
 export const ASSETS = {
   logo: "/assets/logo-cemecor.png",
-  hero: "/assets/hero-cemecor.jpg",
+  founder: "/assets/eliana-cassaro.png",
   heroSlides: [
     {
       src: "/assets/hero-cemecor-encuentro.png",
@@ -43,10 +43,6 @@ export const ASSETS = {
       position: "center 36%",
     },
   ],
-  encuentro: "/assets/encuentro-1.jpg",
-  capacitacion: "/assets/capacitacion-1.jpg",
-  comunidad: "/assets/comunidad-1.jpg",
-  actividad: "/assets/actividad-1.jpg",
 };
 
 export const CONTACT_LINKS = {
@@ -59,24 +55,36 @@ export const CONTACT_LINKS = {
   platformUrl: "https://cemecorcba.web.app/",
 };
 
-export const METRICS = [
-  { value: "+100", label: "mujeres conectadas" },
-  { value: "+25", label: "rubros representados" },
-  { value: "+40", label: "encuentros impulsados" },
-  { value: "+300", label: "participaciones comunitarias" },
-];
+const APP_ORIGIN = "https://cemecorcba.web.app";
+
+/** Link a la app con etiqueta de origen para medir qué sección trae cada visita. */
+export function appLink(path, content) {
+  const params = new URLSearchParams({
+    utm_source: "web",
+    utm_medium: "landing",
+    utm_content: content,
+  });
+  return `${APP_ORIGIN}${path}?${params}`;
+}
+
+export const APP_PATHS = {
+  signup: "/quiero-ser-socia",
+  guest: "/invitada/inicio",
+  login: "/login",
+  home: "/",
+};
 
 export const SPONSORS = [
   { name: "Gobierno de la Provincia de Córdoba", logo: "/assets/partners/gobierno-cordoba.png" },
   { name: "Enjoy STI", logo: "/assets/partners/enjoy-sti.png" },
   { name: "Impulsa Argentina", logo: "/assets/partners/impulsa-argentina.png", wide: true },
   { name: "Dale! 93.1 FM", logo: "/assets/partners/dale-fm.png" },
-  { name: "CPC General Paz", logo: "/assets/partners/cpc-general-paz.png", size: "large" },
+  { name: "CPC General Paz", logo: "/assets/partners/cpc-general-paz.png" },
   { name: "Brennan", logo: "/assets/partners/brennan.png" },
   { name: "DIBACO Amoblamientos", logo: "/assets/partners/dibaco-amoblamientos.png" },
   { name: "Giraudo Equipamiento", logo: "/assets/partners/giraudo-equipamiento.png" },
   { name: "Just", logo: "/assets/partners/just.png" },
-  { name: "Tres Reflejos Retratos", logo: "/assets/partners/tres-reflejos.png", size: "large" },
+  { name: "Tres Reflejos Retratos", logo: "/assets/partners/tres-reflejos.png" },
   { name: "Favi Gonzalez by Bliss", logo: "/assets/partners/favi-gonzalez.png" },
   { name: "VIDA cowork.", logo: "/assets/partners/vida-cowork.png" },
   { name: "Cassaro Matafuegos", logo: "/assets/partners/cassaro-matafuegos.png" },
@@ -91,20 +99,20 @@ export const SPONSORS = [
 export const TESTIMONIALS = [
   {
     quote:
-      "En CEMECOR encontré un espacio donde sentirme acompañada, aprender y compartir mi camino con otras mujeres.",
-    initials: "C",
-    author: "Miembra CEMECOR",
+      "Llegué a la Fundación buscando contactos y encontré mujeres que entienden lo que es emprender. Ya no camino sola.",
+    name: "Carolina",
+    role: "Pastelería artesanal",
   },
   {
     quote:
-      "La Fundación me permitió conectar con mujeres que entienden los desafíos de emprender, liderar y crecer en comunidad.",
-    initials: "E",
-    author: "Emprendedora y Empresaria de Córdoba",
+      "Cada encuentro me deja una herramienta nueva y un vínculo valioso. Y saber que mi cuota sostiene la Fundación me hace sentir parte de algo más grande.",
+    name: "Lucía",
+    role: "Estudio contable",
   },
   {
     quote:
-      "Cada encuentro deja una enseñanza, una conversación o un vínculo que nos impulsa a seguir.",
-    initials: "M",
-    author: "Integrante de la comunidad",
+      "Llevo años al frente de mi empresa y nunca había tenido un espacio así: mujeres que lideran y se impulsan entre sí.",
+    name: "Sofía",
+    role: "Empresa de eventos",
   },
 ];

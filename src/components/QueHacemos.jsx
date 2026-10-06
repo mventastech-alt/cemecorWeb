@@ -1,106 +1,71 @@
-const values = [
+import NewsFeatureCarousel from "./NewsFeatureCarousel.jsx";
+
+const ACTIONS = [
   {
-    icon: "♡",
-    title: "Unidad",
-    text: "Trabajamos juntas, compartiendo experiencias, aprendizajes y desafíos.",
+    title: "Encuentros y networking",
+    text: "Espacios para conocernos, presentar nuestros proyectos y generar alianzas entre mujeres que emprenden y lideran.",
+    image: "/assets/hero-cemecor-encuentro.png",
+    position: "center 52%",
   },
   {
-    icon: "✓",
-    title: "Integridad",
-    text: "Promovemos vínculos basados en el respeto, la transparencia y el compromiso.",
+    title: "Capacitaciones y charlas",
+    text: "Formación con profesionales en marketing, finanzas, marco legal, liderazgo y todo lo que un proyecto necesita para crecer.",
+    image: "/assets/hero-cemecor-capacitacion-sala.jpg",
+    position: "center 42%",
   },
   {
-    icon: "♕",
-    title: "Liderazgo femenino",
-    text: "Visibilizamos el rol de la mujer en el desarrollo social, profesional, emprendedor y empresarial.",
+    title: "Reconocimientos",
+    text: "Visibilizamos a las mujeres que son referentes, como el homenaje en el Concejo Deliberante de Córdoba por el Día del Empresario Nacional.",
+    image: "/assets/reconocimiento-concejo.jpg",
+    position: "center 42%",
   },
   {
-    icon: "◈",
-    title: "Participación",
-    text: "Impulsamos una comunidad activa, donde cada voz tiene un lugar.",
+    title: "Acciones comunitarias y alianzas",
+    text: "Trabajamos junto a instituciones, organizaciones y empresas en iniciativas con impacto para las mujeres de Córdoba.",
+    image: "/assets/hero-cemecor-bandera.png",
+    position: "center 48%",
   },
 ];
-
-const activities = [
-  {
-    icon: "✎",
-    title: "Capacitaciones",
-    text: "Espacios de aprendizaje para fortalecer habilidades, conocimientos y confianza.",
-  },
-  {
-    icon: "☰",
-    title: "Charlas",
-    text: "Encuentros de reflexión, inspiración e intercambio de experiencias.",
-  },
-  {
-    icon: "▣",
-    title: "Agenda de actividades",
-    text: "Una agenda activa para participar, compartir y mantenerse conectadas.",
-  },
-  {
-    icon: "◎",
-    title: "Directorio de miembras",
-    text: "Un espacio para conocer a las integrantes de la comunidad y sus proyectos.",
-  },
-  {
-    icon: "✦",
-    title: "Difusión institucional",
-    text: "Canales para visibilizar actividades, iniciativas e historias de mujeres.",
-  },
-  {
-    icon: "♡",
-    title: "Acompañamiento",
-    text: "Una red cercana para transitar el camino emprendedor y empresarial con más contención.",
-  },
-];
-
-function Card({ icon, title, text }) {
-  return (
-    <article className="card">
-      <div className="card-icon">{icon}</div>
-      <h3>{title}</h3>
-      <p>{text}</p>
-    </article>
-  );
-}
 
 export default function QueHacemos() {
   return (
-    <>
-      <section id="hacemos" className="soft foundation-continuation">
-        <div className="container">
-          <div className="section-head">
-            <span className="eyebrow">Qué es CEMECOR</span>
-            <h2>Más que una Fundación: una comunidad que acompaña</h2>
-            <p className="section-lead">
-              CEMECOR representa y potencia a mujeres Emprendedoras, Empresarias, profesionales y
-              creadoras de proyectos desde la formación, la participación y la comunidad.
-            </p>
-          </div>
-          <div className="cards-grid">
-            {values.map((item) => (
-              <Card {...item} key={item.title} />
-            ))}
-          </div>
-        </div>
-      </section>
+    <section className="section" id="que-hacemos">
+      <div className="container">
+        <header className="section-head" data-reveal>
+          <span className="eyebrow">Qué hacemos</span>
+          <h2 className="display">
+            Una Fundación que <em>se vive</em> en cada encuentro
+          </h2>
+        </header>
 
-      <section className="foundation-do compact-do">
-        <div className="container">
-          <div className="section-head">
-            <span className="eyebrow">Qué hacemos</span>
-            <h2>Acompañamos proyectos, historias y caminos</h2>
-            <p className="section-lead">
-              Propuestas simples y concretas para crecer acompañadas.
-            </p>
-          </div>
-          <div className="cards-grid">
-            {activities.map((item) => (
-              <Card {...item} key={item.title} />
-            ))}
-          </div>
+        <div className="actions-grid">
+          {ACTIONS.map((action) => (
+            <article className="action-card" key={action.title} data-reveal>
+              <div className="action-media">
+                <img
+                  src={action.image}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  style={{ objectPosition: action.position }}
+                />
+              </div>
+              <div className="action-copy">
+                <h3>{action.title}</h3>
+                <p>{action.text}</p>
+              </div>
+            </article>
+          ))}
         </div>
-      </section>
-    </>
+
+        <div className="news-block" data-reveal>
+          <div className="news-block-head">
+            <span className="eyebrow">Novedades</span>
+            <h2 className="display display-sm">La Fundación en movimiento</h2>
+          </div>
+          <NewsFeatureCarousel />
+        </div>
+      </div>
+    </section>
   );
 }

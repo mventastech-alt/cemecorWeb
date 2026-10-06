@@ -1,49 +1,50 @@
-const questions = [
+const QUESTIONS = [
   {
-    question: "¿Qué es CEMECOR?",
-    answer:
-      "CEMECOR es una Fundación de la ciudad de Córdoba que acompaña a mujeres Emprendedoras, Empresarias, profesionales y creadoras de proyectos mediante formación, participación, visibilidad y comunidad.",
-    open: true,
+    q: "¿Qué es CEMECOR?",
+    a: "Es la Fundación de Mujeres Empresarias y Emprendedoras de Córdoba. Reunimos a mujeres que emprenden, dirigen empresas, ejercen una profesión o sostienen proyectos propios, bajo un lema: enseñar, crecer y comunicar.",
   },
   {
-    question: "¿Quiénes pueden sumarse?",
-    answer:
-      "Pueden sumarse mujeres Emprendedoras, Empresarias, profesionales, trabajadoras independientes, creadoras de proyectos e integrantes que quieran participar activamente en una comunidad de crecimiento colectivo.",
+    q: "¿Quiénes pueden sumarse?",
+    a: "Todas las mujeres que emprenden, lideran una empresa, ejercen una profesión o tienen un proyecto propio y quieren crecer acompañadas.",
   },
   {
-    question: "¿Qué actividades realiza la Fundación?",
-    answer:
-      "La Fundación impulsa capacitaciones, charlas, encuentros, agenda de actividades, espacios de difusión institucional y propuestas de participación entre miembras.",
+    q: "¿Qué es la cuota social?",
+    a: "Es el aporte mensual de cada miembra para pertenecer a la Fundación. A través de ella se sostiene parte de CEMECOR: encuentros y capacitaciones, la plataforma digital y acciones comunitarias.",
   },
   {
-    question: "¿Qué son los Diamantes CEMECOR?",
-    answer:
-      "Los Diamantes son una forma simbólica de reconocer la participación, el compromiso y la presencia activa de las miembras dentro de la Fundación.",
+    q: "¿Qué actividades realiza la Fundación?",
+    a: "Encuentros y networking, capacitaciones y charlas, reconocimientos a mujeres referentes y acciones comunitarias junto a instituciones y empresas aliadas.",
   },
   {
-    question: "¿La plataforma digital es la Fundación?",
-    answer:
-      "No. La plataforma digital es una herramienta de apoyo. La esencia de CEMECOR está en su comunidad, sus encuentros, su historia y su propósito.",
+    q: "¿Qué es la plataforma digital?",
+    a: "Es la herramienta de la Fundación para que la comunidad esté conectada: directorio de miembras, agenda, charlas, capacitaciones y beneficios. Funciona desde el navegador y podés agregarla a la pantalla de inicio del celular (en iPhone desde Safari con «Compartir → Agregar a inicio»; en Android desde Chrome con «Instalar app»).",
+  },
+  {
+    q: "¿Qué puedo ver como invitada?",
+    a: "El modo invitada te permite recorrer la plataforma y ver cómo es por dentro. Es solo una vista previa: para participar de la red y usar las herramientas necesitás ser miembra.",
+  },
+  {
+    q: "¿Puedo darme de baja?",
+    a: "Sí. Podés cancelar tu cuota social desde la plataforma cuando quieras.",
   },
 ];
 
 export default function FAQ() {
   return (
-    <section id="faq">
-      <div className="container two-col">
-        <div>
+    <section className="section section-cream" id="preguntas">
+      <div className="container faq-grid">
+        <div data-reveal>
           <span className="eyebrow">Preguntas frecuentes</span>
-          <h2 className="section-title-offset">Información útil</h2>
-          <p className="section-lead section-copy-offset">
-            Respuestas simples para conocer mejor el propósito, la comunidad y la plataforma de
-            CEMECOR.
-          </p>
+          <h2 className="display">
+            Todo lo que <em>querés saber</em>
+          </h2>
+          <p className="lead">¿Te quedó alguna duda? Escribinos y te respondemos.</p>
         </div>
-        <div className="faq">
-          {questions.map((item) => (
-            <details open={item.open} key={item.question}>
-              <summary>{item.question}</summary>
-              <p>{item.answer}</p>
+        <div className="faq-list" data-reveal>
+          {QUESTIONS.map((item) => (
+            <details key={item.q}>
+              <summary>{item.q}</summary>
+              <p>{item.a}</p>
             </details>
           ))}
         </div>

@@ -1,71 +1,93 @@
-import { ASSETS } from "../constants.js";
+import { useEffect, useState } from "react";
+import { ASSETS, APP_PATHS, appLink } from "../constants.js";
+import BrandSwoosh from "./BrandSwoosh.jsx";
+import { ArrowRight } from "./icons.jsx";
 
-const concepts = [
-  { icon: "♁", label: "Emprendedoras y Empresarias" },
-  { icon: "✎", label: "Formación continua" },
-  { icon: "♡", label: "Vínculos que acompañan" },
-  { icon: "✦", label: "Comunidad en movimiento" },
+const SLIDE_MS = 6000;
+
+const PILLARS = [
+  { title: "Enseñar", text: "Formación y capacitaciones" },
+  { title: "Crecer", text: "Red y oportunidades" },
+  { title: "Comunicar", text: "Visibilidad y reconocimiento" },
 ];
 
-const SLIDE_SECONDS = 4;
-const slideCycleSeconds = ASSETS.heroSlides.length * SLIDE_SECONDS;
-
 export default function Hero() {
+  const slides = ASSETS.heroSlides;
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
+    const timer = window.setInterval(() => {
+      setActive((index) => (index + 1) % slides.length);
+    }, SLIDE_MS);
+    return () => window.clearInterval(timer);
+  }, [slides.length]);
+
   return (
-    <section className="hero">
-      <div className="container">
-        <div className="hero-grid">
-          <div className="hero-copy">
-            <span className="eyebrow">CEME-COR · Córdoba</span>
-            <h1>
-              Una comunidad de mujeres que <span>crecen juntas</span>
-            </h1>
-            <p className="lead">
-              Desde Córdoba, CEMECOR acompaña a mujeres Emprendedoras, Empresarias, profesionales y
-              creadoras de proyectos, generando espacios de formación, participación, visibilidad y
-              crecimiento colectivo.
-            </p>
-            <div className="signature">Enseñar, crecer y comunicar</div>
-            <div className="hero-actions">
-              <a className="btn primary" href="#contacto">
-                Quiero sumarme
-              </a>
-              <a className="btn outline" href="#fundacion">
-                Conocer la Fundación
-              </a>
-            </div>
+    <section className="hero" id="inicio">
+      <div className="hero-slides" aria-hidden="true">
+        {slides.map((slide, index) => (
+          <img
+            key={slide.src}
+            className={index === active ? "is-active" : undefined}
+            src={slide.src}
+            alt=""
+            style={{ objectPosition: slide.position }}
+            loading={index === 0 ? "eager" : "lazy"}
+            decoding="async"
+          />
+        ))}
+      </div>
+      <div className="hero-veil" aria-hidden="true" />
+      <div className="hero-aurora" aria-hidden="true" />
+      <BrandSwoosh className="hero-swoosh" />
+
+      <div className="container hero-inner">
+        <div className="hero-copy">
+          <span className="eyebrow eyebrow-light">Fundación CEMECOR · Córdoba</span>
+          <h1>
+            Mujeres que emprenden, lideran y <em>crecen juntas.</em>
+          </h1>
+          <p className="hero-lead">
+            Somos la Fundación de Mujeres Empresarias y Emprendedoras de Córdoba. Acompañamos a cada
+            mujer con formación, comunidad y una red real que la sostiene.
+          </p>
+          <div className="hero-actions">
+            <a className="btn btn-primary btn-lg" href="#cuota">
+              Sumate a la Fundación
+              <ArrowRight />
+            </a>
+            <a className="btn btn-glass btn-lg" href="#fundacion">
+              Conocé la Fundación
+            </a>
           </div>
-          <div className="hero-card" aria-label="Imagen de comunidad CEMECOR">
-            <div className="hero-image">
-              {ASSETS.heroSlides.map((image, index) => (
-                <div
-                  className="hero-slide"
-                  key={image.src}
-                  style={{
-                    backgroundImage: `url(${image.src})`,
-                    backgroundPosition: image.position,
-                    animationDuration: `${slideCycleSeconds}s`,
-                    animationDelay: `${index * SLIDE_SECONDS}s`,
-                    "--slide-position": image.position,
-                  }}
-                >
-                  <img className="hero-slide-photo" src={image.src} alt={image.alt} />
-                </div>
-              ))}
-            </div>
-            <span className="float-card one">✦ Formación</span>
-            <span className="float-card two">♡ Comunidad</span>
-            <span className="float-card three">◈ Participación</span>
-            <span className="float-card four">✧ Visibilidad</span>
-          </div>
+          <p className="hero-login">
+            ¿Ya sos miembra?{" "}
+            <a href={appLink(APP_PATHS.login, "hero-ingresar")}>Ingresá a la plataforma</a>
+          </p>
         </div>
-        <div className="concept-strip" aria-label="Conceptos institucionales">
-          {concepts.map((concept) => (
-            <div className="concept" key={concept.label}>
-              <span className="icon-dot">{concept.icon}</span>
-              {concept.label}
-            </div>
-          ))}
+
+        <div className="hero-bottom">
+          <ul className="hero-pillars" aria-label="Nuestro lema">
+            {PILLARS.map((pillar) => (
+              <li key={pillar.title}>
+                <strong>{pillar.title}</strong>
+                <span>{pillar.text}</span>
+              </li>
+            ))}
+          </ul>
+          <div className="hero-dots" role="group" aria-label="Fotos de la Fundación">
+            {slides.map((slide, index) => (
+              <button
+                key={slide.src}
+                type="button"
+                className={index === active ? "is-active" : undefined}
+                aria-label={`Ver foto ${index + 1}: ${slide.alt}`}
+                aria-current={index === active ? "true" : undefined}
+                onClick={() => setActive(index)}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

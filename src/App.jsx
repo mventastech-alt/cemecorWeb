@@ -1,26 +1,26 @@
+import { useEffect } from "react";
 import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
-import Prologo from "./components/Prologo.jsx";
+import SponsorsStrip from "./components/SponsorsStrip.jsx";
+import Fundacion from "./components/Fundacion.jsx";
+import Fundadora from "./components/Fundadora.jsx";
+import QueHacemos from "./components/QueHacemos.jsx";
+import CuotaSocial from "./components/CuotaSocial.jsx";
 import Plataforma from "./components/Plataforma.jsx";
-import Impacto from "./components/Impacto.jsx";
-import AlianzasEstrategicas from "./components/AlianzasEstrategicas.jsx";
+import Testimonios from "./components/Testimonios.jsx";
+import ComoEmpezar from "./components/ComoEmpezar.jsx";
+import SumaTuMarca from "./components/SumaTuMarca.jsx";
+import FAQ from "./components/FAQ.jsx";
 import Contacto from "./components/Contacto.jsx";
 import Footer from "./components/Footer.jsx";
-import { useEffect } from "react";
 
 export default function App() {
   useEffect(() => {
-    const revealElements = document.querySelectorAll(
-      "main > section, .final-cta, .card, .profile-card, .stat, .statement-card, .phone, .form, .news-feature"
-    );
-
+    const elements = document.querySelectorAll("[data-reveal]");
     if (!("IntersectionObserver" in window)) {
-      revealElements.forEach((element) => element.classList.add("is-visible"));
+      elements.forEach((element) => element.classList.add("is-visible"));
       return undefined;
     }
-
-    revealElements.forEach((element) => element.classList.add("reveal-on-scroll"));
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -30,23 +30,27 @@ export default function App() {
           }
         });
       },
-      { threshold: 0.14, rootMargin: "0px 0px -8% 0px" }
+      { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
     );
-
-    revealElements.forEach((element) => observer.observe(element));
-
+    elements.forEach((element) => observer.observe(element));
     return () => observer.disconnect();
   }, []);
 
   return (
     <>
       <Header />
-      <main id="inicio">
+      <main>
         <Hero />
-        <Prologo />
+        <SponsorsStrip />
+        <Fundacion />
+        <Fundadora />
+        <QueHacemos />
+        <Testimonios />
+        <CuotaSocial />
+        <ComoEmpezar />
         <Plataforma />
-        <Impacto />
-        <AlianzasEstrategicas />
+        <SumaTuMarca />
+        <FAQ />
         <Contacto />
       </main>
       <Footer />
