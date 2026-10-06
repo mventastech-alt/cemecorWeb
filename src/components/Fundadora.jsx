@@ -12,7 +12,11 @@ const MILESTONES = [
   },
   {
     tag: "Desde 2013",
-    text: "Organizadora de eventos sociales y empresariales con sello propio. Creó «Tarde de Mujeres».",
+    text: "Productora de eventos sociales y empresariales con sello propio. Creó «Tarde de Mujeres».",
+  },
+  {
+    tag: "Expocerveza Córdoba",
+    text: "Productora de Expocerveza Córdoba, el encuentro de la cultura cervecera cordobesa.",
   },
   {
     tag: "Agosto 2026",
@@ -45,20 +49,22 @@ export default function Fundadora() {
             Una empresaria que eligió <em>abrir camino</em> para otras
           </h2>
           <p className="lead">
-            Eliana Cassaro es diseñadora gráfica, organizadora de eventos y empresaria cordobesa.
-            Creció dentro de Cervecería Cassaro, donde hace más de veinte años lidera el área
-            comercial, y en paralelo construyó su propio camino como emprendedora.
+            Eliana Cassaro es licenciada en Ventas, diseñadora gráfica publicitaria, productora de
+            eventos y empresaria cordobesa. Creció dentro de Cervecería Cassaro, donde hace más de
+            veinte años lidera el área comercial, y es la productora de Expocerveza Córdoba.
           </p>
           <p>
             Su primer gran evento, «Tarde de Mujeres», nació de una necesidad personal: conocer y
             conectar con otras mujeres que estaban empezando a emprender. Forma parte de la comisión
             directiva de la Cámara de Cerveceros de Córdoba como una de las pocas mujeres miembras
-            del grupo, y sabe por
-            experiencia lo que significa liderar en espacios donde todavía somos pocas.
+            del grupo, y sabe por experiencia lo que significa liderar en espacios donde las mujeres
+            todavía son minoría.
           </p>
           <p>
-            Esa misma búsqueda es la que hoy le da vida a CEMECOR: una red donde las mujeres que
-            emprenden y lideran se encuentran, aprenden y crecen juntas.
+            El espíritu emprendedor es algo innato que sigue latiendo en su corazón, y el
+            empresariado es la forma en que eligió hacer realidad sus ideas. Por eso creó CEMECOR:
+            para ayudar a otras empresarias y emprendedoras a recorrer ese mismo camino, en una red
+            donde se encuentran, aprenden y crecen juntas.
           </p>
 
           <blockquote className="founder-quote">
