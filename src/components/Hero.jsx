@@ -49,7 +49,7 @@ export default function Hero() {
             Mujeres que emprenden, lideran y <em>crecen juntas.</em>
           </h1>
           <p className="hero-lead">
-            Somos la Fundación de Mujeres Empresarias y Emprendedoras de Córdoba. Acompañamos a cada
+            Somos la Fundación de Emprendedoras y Mujeres Empresarias de Córdoba. Acompañamos a cada
             mujer con formación, comunidad y una red real que la sostiene.
           </p>
           <div className="hero-actions">

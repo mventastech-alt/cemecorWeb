@@ -20,7 +20,7 @@ const SLIDES = [
     src: "/assets/hero-cemecor-encuentro.png",
     alt: "Mujeres participando de un encuentro institucional CEMECOR",
     kicker: "Comunidad",
-    title: "Encuentros que fortalecen la red de mujeres Empresarias y Emprendedoras",
+    title: "Encuentros que fortalecen la red de mujeres Emprendedoras y Empresarias",
     date: "Córdoba · CEMECOR",
     href: "https://instagram.com/cemecor.ok",
     cue: "Ver más",

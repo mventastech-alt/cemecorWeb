@@ -48,7 +48,7 @@ export default function SumaTuMarca() {
           <div className="brand-cta-copy">
             <h3>Sumá tu marca a la Fundación</h3>
             <p>
-              Acompañá a una comunidad de mujeres empresarias y emprendedoras de Córdoba y llegá a
+              Acompañá a una comunidad de mujeres emprendedoras y empresarias de Córdoba y llegá a
               ellas todos los días, en la web y en la app.
             </p>
             <a

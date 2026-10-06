@@ -1,7 +1,7 @@
 const QUESTIONS = [
   {
     q: "¿Qué es CEMECOR?",
-    a: "Es la Fundación de Mujeres Empresarias y Emprendedoras de Córdoba. Reunimos a mujeres que emprenden, dirigen empresas, ejercen una profesión o sostienen proyectos propios, bajo un lema: enseñar, crecer y comunicar.",
+    a: "Es la Fundación de Emprendedoras y Mujeres Empresarias de Córdoba. Reunimos a mujeres que emprenden, dirigen empresas, ejercen una profesión o sostienen proyectos propios, bajo un lema: enseñar, crecer y comunicar.",
   },
   {
     q: "¿Quiénes pueden sumarse?",
